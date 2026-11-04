@@ -1,5 +1,7 @@
 package org.hw9_proxy.model;
 
+import java.util.Objects;
+
 public class Song {
     private String title, artist, album;
     private int id, duration;
@@ -59,5 +61,33 @@ public class Song {
                 + "Artist: " + this.getArtist() + "\n"
                 + "Duration: " + this.getDuration() / 60 + "\n"
                 ;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+
+        if (!(object instanceof Song other)) {
+            return false;
+        }
+
+        return id == other.id
+                && duration == other.duration
+                && Objects.equals(title, other.title)
+                && Objects.equals(artist, other.artist)
+                && Objects.equals(album, other.album);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                id,
+                title,
+                artist,
+                album,
+                duration
+        );
     }
 }

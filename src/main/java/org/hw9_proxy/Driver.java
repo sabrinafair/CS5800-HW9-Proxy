@@ -20,7 +20,7 @@ public class Driver {
         System.out.println("--------------------------------");
         System.out.println("GET SONGS BY ID");
         for(int i = 1; i <= 10; i++){
-           System.out.println("ID searched for: " + i);
+           System.out.println("ID searching for: " + i);
            currSong = songServiceProxy.searchById(i);
            System.out.println(currSong.toString());
            System.out.println();
@@ -30,7 +30,7 @@ public class Driver {
         System.out.println("GET SONGS BY TITLE");
         List<Song> currSongs;
         for(String title: songTitles){
-            System.out.println("Title searched for: " + title);
+            System.out.println("Title searching for: " + title);
             currSongs = songServiceProxy.searchByTitle(title);
             for(Song song: currSongs){
             System.out.println(song.toString());
@@ -41,7 +41,7 @@ public class Driver {
         System.out.println();
         System.out.println("GET SONGS BY ALBUM");
         for(String album: songAlbums){
-            System.out.println("Album searched for: " + album);
+            System.out.println("Album searching for: " + album);
             currSongs = songServiceProxy.searchByAlbum(album);
             for(Song song: currSongs){
                 System.out.println(song.toString());
@@ -57,7 +57,7 @@ public class Driver {
 
         System.out.println("GET SONGS BY ID");
         for(int i = 1; i <= 10; i++){
-            System.out.println("ID searched for: " + i);
+            System.out.println("ID searching for: " + i);
             currSong = songServiceProxy.searchById(i);
             System.out.println(currSong.toString());
             System.out.println();
@@ -66,7 +66,7 @@ public class Driver {
         System.out.println();
         System.out.println("GET SONGS BY TITLE");
         for(String title: songTitles){
-            System.out.println("Title searched for: " + title);
+            System.out.println("Title searching for: " + title);
             currSongs = songServiceProxy.searchByTitle(title);
             for(Song song: currSongs){
                 System.out.println(song.toString());
@@ -76,7 +76,7 @@ public class Driver {
         System.out.println();
         System.out.println("GET SONGS BY ALBUM");
         for(String album: songAlbums){
-            System.out.println("Album searched for: " + album);
+            System.out.println("Album searching for: " + album);
             currSongs = songServiceProxy.searchByAlbum(album);
             for(Song song: currSongs){
                 System.out.println(song.toString());
